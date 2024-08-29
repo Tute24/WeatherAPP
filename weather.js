@@ -1,0 +1,29 @@
+let mainArea = document.getElementById('mainArea')
+let input = document.getElementById('inputPoint')
+let searchButton = document.getElementById('searchButton')
+
+searchButton.addEventListener('click',async () =>{
+    let values = document.getElementById('inputPoint').value
+    try{
+        let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=d1f61619e8e74eedbcd20020242808&q=${values}`)
+        let weatherInfos = await response.json()
+        let headerTemp = document.getElementById('tempText')
+        let headerWind = document.getElementById('windText')
+        let headerHum = document.getElementById('humidText')
+        headerTemp.textContent = weatherInfos.current.temp_c
+        headerWind.textContent = weatherInfos.current.wind_kph
+        headerHum.textContent = weatherInfos.current.humidity
+    
+} 
+    catch (error){
+        let headerTemp = document.getElementById('tempText')
+        let headerWind = document.getElementById('windText')
+        let headerHum = document.getElementById('humidText')
+        headerTemp.textContent = error.message
+        headerWind.textContent = error.message
+        headerHum.textContent = error.message
+    }
+})
+
+
+
