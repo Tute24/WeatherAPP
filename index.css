@@ -71,7 +71,7 @@ div{
 input{
     color: white;
     height:30px;
-    margin-left: 2px;
+    width: 220px;
     border-radius: 20px;
     border: solid;
     text-align: center;
@@ -87,9 +87,22 @@ h3,h2{
     margin: 0.3rem 0 ;
     
 }
+footer{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+    font-weight: bold;
+}
 
+#footDiv{
+    background-color:rgb(1, 3, 71) ;
+    color: white;
+    width:max-content;
+    height: max-content;
+}
 h3{
-    color: rgb(41, 44, 148);
+    color: rgb(85, 109, 171);
 }
 
 button{
