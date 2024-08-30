@@ -19,9 +19,9 @@ searchButton.addEventListener('click',async () =>{
         let headerTemp = document.getElementById('tempText')
         let headerWind = document.getElementById('windText')
         let headerHum = document.getElementById('humidText')
-        headerTemp.textContent = error.message
-        headerWind.textContent = error.message
-        headerHum.textContent = error.message
+        headerTemp.textContent = `Cidade não encontrada!`
+        headerWind.textContent = `Cidade não encontrada!`
+        headerHum.textContent = `Cidade não encontrada!`
     }
 })
 
