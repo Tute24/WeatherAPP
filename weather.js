@@ -24,6 +24,7 @@ searchButton.addEventListener('click',async () =>{
         headerTemp.textContent = `Cidade não encontrada!`
         headerWind.textContent = `Cidade não encontrada!`
         headerHum.textContent = `Cidade não encontrada!`
+        console.log(error)
     }
 })
 
